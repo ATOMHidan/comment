@@ -126,7 +126,7 @@ function enhance(html) {
   const init = `<script id="soyo-account-init">(${initialize.toString()})();</script>`;
   return html
     .replace(/<html>/i, '<html lang="zh-CN">')
-    .replace(/<title>[^<]*<\/title>/i, '<title>?? ? Soyo Course</title>')
+    .replace(/<title>[^<]*<\/title>/i, '<title>账户 · Soyo Course</title>')
     .replace(/<\/head>/i, `<style id="soyo-account-style">${css}</style></head>`)
     .replace(/(<script\s+src=)/i, '<header class="soyo-account-header"><a class="soyo-account-brand" href="https://262860.xyz/" target="_blank" rel="noopener">Soyo Course</a><a href="https://262860.xyz/" target="_blank" rel="noopener">返回博客 ↗</a></header>' + init + '$1')
     .replace('//unpkg.com/@waline/admin"', '//unpkg.com/@waline/admin@0.36.0/dist/admin.js"');
